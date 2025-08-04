@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+  labels:
+    name: myapp
+spec:
+  containers:
+  - name: nginxcontainer
+    image: nginx:latest
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 80
+  - name: nginxontainer
+    image: nginx:latest
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 80
+
+#env:
+ #   - name: ENV_VAR_1
+  #    value: "value1"
+   # - name: ENV_VAR_2
+    #  valueFrom:
+     #   secretKeyRef:
+      #    name: myapp-secret
+       #   key: secret-key
+  #restartPolicy: Always
+  #nodeSelector:
+   # kubernetes.io/os: linux 
