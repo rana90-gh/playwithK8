@@ -28,15 +28,3 @@ spec:
         cpu: "500m"
     ports:
       - containerPort: 80
-
-#env:
- #   - name: ENV_VAR_1
-  #    value: "value1"
-   # - name: ENV_VAR_2
-    #  valueFrom:
-     #   secretKeyRef:
-      #    name: myapp-secret
-       #   key: secret-key
-  #restartPolicy: Always
-  #nodeSelector:
-   # kubernetes.io/os: linux 
