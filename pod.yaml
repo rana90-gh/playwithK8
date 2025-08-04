@@ -6,7 +6,7 @@ metadata:
     name: myapp
 spec:
   containers:
-  - name: nginxcontainer
+  - name: nginxcontainer1  # Changed to unique names
     image: nginx:latest
     resources:
       requests:
@@ -17,7 +17,7 @@ spec:
         cpu: "500m"
     ports:
       - containerPort: 80
-  - name: nginxontainer
+  - name: nginxcontainer2  # Fixed typo + unique name
     image: nginx:latest
     resources:
       requests:
@@ -28,3 +28,6 @@ spec:
         cpu: "500m"
     ports:
       - containerPort: 80
+  restartPolicy: Always  # Uncommented and fixed indentation
+  nodeSelector:
+    kubernetes.io/os: linux
